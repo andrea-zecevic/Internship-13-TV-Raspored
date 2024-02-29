@@ -1,6 +1,7 @@
 let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
 document.addEventListener("DOMContentLoaded", () => {
   loadSchedule();
+  updateWatchlistDisplay();
 });
 
 let currentIndex = 0;
@@ -71,15 +72,16 @@ function displaySchedule(channels) {
 `;
 
       const watchlistButton = programElement.querySelector(".watchlist-toggle");
+
       watchlistButton.addEventListener("click", function (e) {
         e.stopPropagation();
         const programId = this.getAttribute("data-program-id");
-        const isAdded = watchlist.includes(programId);
+        const isAdded = watchlist.some((item) => item.id === programId);
         if (isAdded) {
-          watchlist = watchlist.filter((id) => id !== programId);
+          watchlist = watchlist.filter((item) => item.id !== programId);
           this.textContent = "Dodaj u Watchlistu";
         } else {
-          watchlist.push(programId);
+          watchlist.push({ id: programId, name: program.name });
           this.textContent = "Ukloni iz Watchliste";
         }
         localStorage.setItem("watchlist", JSON.stringify(watchlist));
@@ -155,4 +157,15 @@ window.onclick = function (event) {
   }
 };
 
-function updateWatchlistDisplay() {}
+function updateWatchlistDisplay() {
+  const watchlistElement = document.getElementById("watchlist");
+  watchlistElement.innerHTML = "";
+
+  watchlist.forEach((item) => {
+    if (item && item.name) {
+      const listItem = document.createElement("li");
+      listItem.textContent = item.name;
+      watchlistElement.appendChild(listItem);
+    }
+  });
+}

@@ -117,3 +117,27 @@ h1 {
 .watchlist-toggle:hover {
   background-color: #45a049;
 }
+
+#watchlist-container {
+  margin-top: 20px;
+  border: 1px solid #007bff;
+  background-color: #ffffff;
+  padding: 10px;
+  max-width: 400px;
+  margin-right: auto;
+}
+
+#watchlist {
+  list-style-type: none;
+  padding: 0;
+}
+
+#watchlist li {
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
