@@ -72,6 +72,29 @@ function displaySchedule(channels) {
       }</button>
 `;
 
+      const userRatings = JSON.parse(localStorage.getItem("userRatings")) || {};
+      const userRatingForProgram = userRatings[programId] || "Nije ocijenjeno";
+      programElement.innerHTML += `
+  <select class="user-rating" data-program-id="${programId}">
+    <option value="">Moja ocjena</option>
+    <option value="1" ${
+      userRatingForProgram === "1" ? "selected" : ""
+    }>1</option>
+    <option value="2" ${
+      userRatingForProgram === "2" ? "selected" : ""
+    }>2</option>
+    <option value="3" ${
+      userRatingForProgram === "3" ? "selected" : ""
+    }>3</option>
+    <option value="4" ${
+      userRatingForProgram === "4" ? "selected" : ""
+    }>4</option>
+    <option value="5" ${
+      userRatingForProgram === "5" ? "selected" : ""
+    }>5</option>
+  </select>
+`;
+
       const watchlistButton = programElement.querySelector(".watchlist-toggle");
 
       watchlistButton.addEventListener("click", function (e) {
@@ -92,6 +115,7 @@ function displaySchedule(channels) {
       programElement.addEventListener("click", () =>
         displayProgramDetails(program)
       );
+
       channelElement.appendChild(programElement);
     });
 
@@ -207,4 +231,18 @@ function loadSchedule(
       displaySchedule(filteredChannels);
     })
     .catch((error) => console.error("Error loading schedule:", error));
+}
+
+document.addEventListener("change", function (e) {
+  if (e.target && e.target.classList.contains("user-rating")) {
+    const programId = e.target.dataset.programId;
+    const selectedRating = e.target.value;
+    saveUserRating(programId, selectedRating);
+  }
+});
+
+function saveUserRating(programId, rating) {
+  const userRatings = JSON.parse(localStorage.getItem("userRatings")) || {};
+  userRatings[programId] = rating;
+  localStorage.setItem("userRatings", JSON.stringify(userRatings));
 }
