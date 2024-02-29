@@ -1,3 +1,4 @@
+let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
 document.addEventListener("DOMContentLoaded", () => {
   loadSchedule();
 });
@@ -38,9 +39,13 @@ function displaySchedule(channels) {
       currentIndex + programsPerPage
     );
 
-    displayedPrograms.forEach((program) => {
+    displayedPrograms.forEach((program, index) => {
       const programElement = document.createElement("div");
       programElement.classList.add("program");
+
+      const programId = `program-${program.name}-${program.startTime}`;
+      programElement.setAttribute("data-program-id", programId);
+      const isWatchlisted = watchlist.includes(programId);
 
       const [startHours, startMinutes] = program.startTime
         .split(":")
@@ -57,10 +62,30 @@ function displaySchedule(channels) {
       }
 
       programElement.innerHTML = `
-        <h3>${program.name}</h3>
-        <p>${program.startTime} - ${program.endTime}</p>
-        <p>Kategorija: ${program.category}</p>
-      `;
+  <h3>${program.name}</h3>
+  <p>${program.startTime} - ${program.endTime}</p>
+  <p>Kategorija: ${program.category}</p>
+  <button class="watchlist-toggle" data-program-id="${programId}">${
+        isWatchlisted ? "Ukloni iz Watchliste" : "Dodaj u Watchlistu"
+      }</button>
+`;
+
+      const watchlistButton = programElement.querySelector(".watchlist-toggle");
+      watchlistButton.addEventListener("click", function (e) {
+        e.stopPropagation();
+        const programId = this.getAttribute("data-program-id");
+        const isAdded = watchlist.includes(programId);
+        if (isAdded) {
+          watchlist = watchlist.filter((id) => id !== programId);
+          this.textContent = "Dodaj u Watchlistu";
+        } else {
+          watchlist.push(programId);
+          this.textContent = "Ukloni iz Watchliste";
+        }
+        localStorage.setItem("watchlist", JSON.stringify(watchlist));
+        updateWatchlistDisplay();
+      });
+
       programElement.addEventListener("click", () =>
         displayProgramDetails(program)
       );
@@ -129,3 +154,5 @@ window.onclick = function (event) {
     document.getElementById("programModal").style.display = "none";
   }
 };
+
+function updateWatchlistDisplay() {}

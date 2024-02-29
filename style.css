@@ -103,3 +103,17 @@ h1 {
   text-decoration: none;
   cursor: pointer;
 }
+
+.watchlist-toggle {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.watchlist-toggle:hover {
+  background-color: #45a049;
+}
