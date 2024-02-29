@@ -4,8 +4,8 @@
       "name": "HRT 1",
       "programs": [
         {
-          "startTime": "2024-02-27T08:00:00",
-          "endTime": "2024-02-27T10:00:00",
+          "startTime": "08:00",
+          "endTime": "10:00",
           "name": "Dobro jutro, Hrvatska",
           "description": "Jutarnji informativni program.",
           "category": "informativni program",
@@ -13,8 +13,8 @@
           "rating": 4
         },
         {
-          "startTime": "2024-02-27T14:00:00",
-          "endTime": "2024-02-27T15:00:00",
+          "startTime": "14:00",
+          "endTime": "15:00",
           "name": "Nedjeljom u 2",
           "description": "Informativna emisija nedjeljom.",
           "category": "informativni program",
@@ -22,8 +22,8 @@
           "rating": 5
         },
         {
-          "startTime": "2024-02-27T20:00:00",
-          "endTime": "2024-02-27T21:00:00",
+          "startTime": "20:00",
+          "endTime": "21:00",
           "name": "Volim Hrvatsku",
           "description": "Vecernji program zabave.",
           "category": "zabavni program",
@@ -31,8 +31,8 @@
           "rating": 4
         },
         {
-          "startTime": "2024-02-27T12:00:00",
-          "endTime": "2024-02-27T13:30:00",
+          "startTime": "12:00",
+          "endTime": "13:30",
           "name": "Kod Ane",
           "description": "Kulinarski show.",
           "category": "zabavni program",
@@ -40,8 +40,8 @@
           "rating": 3
         },
         {
-          "startTime": "2024-02-27T13:30:00",
-          "endTime": "2024-02-27T14:00:00",
+          "startTime": "13:30",
+          "endTime": "14:00",
           "name": "Vijesti u 1.30",
           "description": "Popodnevne vijesti.",
           "category": "informativni program",
@@ -49,8 +49,8 @@
           "rating": 4
         },
         {
-          "startTime": "2024-02-27T15:00:00",
-          "endTime": "2024-02-27T17:00:00",
+          "startTime": "15:00",
+          "endTime": "17:00",
           "name": "Potjera",
           "description": "Kviz.",
           "category": "zabavni program",
@@ -58,8 +58,8 @@
           "rating": 4
         },
         {
-          "startTime": "2024-02-27T17:00:00",
-          "endTime": "2024-02-27T18:00:00",
+          "startTime": "17:00",
+          "endTime": "18:00",
           "name": "Zvijezde pjevaju",
           "description": "Glazbeni show.",
           "category": "zabavni program",
@@ -67,8 +67,8 @@
           "rating": 5
         },
         {
-          "startTime": "2024-02-27T18:00:00",
-          "endTime": "2024-02-27T19:00:00",
+          "startTime": "18:00",
+          "endTime": "19:00",
           "name": "Zvijezde pjevaju 2",
           "description": "Glazbeni show.",
           "category": "zabavni program",
@@ -76,8 +76,8 @@
           "rating": 5
         },
         {
-          "startTime": "2024-02-27T19:00:00",
-          "endTime": "2024-02-27T20:00:00",
+          "startTime": "19:00",
+          "endTime": "20:00",
           "name": "Dnevnik",
           "description": "Središnja informativna emisija.",
           "category": "informativni program",
@@ -85,12 +85,12 @@
           "rating": 5
         },
         {
-          "startTime": "2024-02-27T21:00:00",
-          "endTime": "2024-02-27T23:00:00",
+          "startTime": "21:00",
+          "endTime": "23:00",
           "name": "Tvoje lice zvuči poznato repriza",
           "description": "Zabavni show.",
           "category": "zabavni program",
-          "isRepeat": false,
+          "isRepeat": true,
           "rating": 4
         }
       ]
@@ -99,8 +99,8 @@
       "name": "Nova TV",
       "programs": [
         {
-          "startTime": "2024-02-27T10:00:00",
-          "endTime": "2024-02-27T11:30:00",
+          "startTime": "10:00",
+          "endTime": "11:30",
           "name": "Informer",
           "description": "Jutarnji talk show.",
           "category": "talk show",
@@ -108,8 +108,8 @@
           "rating": 3
         },
         {
-          "startTime": "2024-02-27T11:30:00",
-          "endTime": "2024-02-27T13:00:00",
+          "startTime": "11:30",
+          "endTime": "13:00",
           "name": "Dobar dan, Hrvatska",
           "description": "Popodnevni magazin.",
           "category": "magazin",
@@ -117,8 +117,8 @@
           "rating": 4
         },
         {
-          "startTime": "2024-02-27T13:00:00",
-          "endTime": "2024-02-27T14:30:00",
+          "startTime": "13:00",
+          "endTime": "14:30",
           "name": "Vijesti Nove TV",
           "description": "Središnje vijesti.",
           "category": "informativni program",
@@ -126,8 +126,8 @@
           "rating": 5
         },
         {
-          "startTime": "2024-02-27T14:30:00",
-          "endTime": "2024-02-27T16:00:00",
+          "startTime": "14:30",
+          "endTime": "16:00",
           "name": "Sudnica",
           "description": "Pravni reality show.",
           "category": "reality show",
@@ -135,8 +135,8 @@
           "rating": 2
         },
         {
-          "startTime": "2024-02-27T16:00:00",
-          "endTime": "2024-02-27T17:30:00",
+          "startTime": "16:00",
+          "endTime": "17:30",
           "name": "Gospodin Savršeni",
           "description": "Reality show.",
           "category": "reality show",
@@ -144,17 +144,17 @@
           "rating": 3
         },
         {
-          "startTime": "2024-02-27T17:30:00",
-          "endTime": "2024-02-27T19:00:00",
+          "startTime": "17:30",
+          "endTime": "19:00",
           "name": "Provjereno",
           "description": "Istraživački magazin.",
-          "category": "magazin",
+          "category": "odrasli program",
           "isRepeat": false,
           "rating": 5
         },
         {
-          "startTime": "2024-02-27T19:00:00",
-          "endTime": "2024-02-27T20:30:00",
+          "startTime": "19:00",
+          "endTime": "20:30",
           "name": "Dnevnik Nove TV",
           "description": "Večernje vijesti.",
           "category": "informativni program",
@@ -162,8 +162,8 @@
           "rating": 5
         },
         {
-          "startTime": "2024-02-27T20:30:00",
-          "endTime": "2024-02-27T22:00:00",
+          "startTime": "20:30",
+          "endTime": "22:00",
           "name": "Tvoje lice zvuči poznato",
           "description": "Zabavni show.",
           "category": "zabavni program",
@@ -171,17 +171,17 @@
           "rating": 4
         },
         {
-          "startTime": "2024-02-27T22:00:00",
-          "endTime": "2024-02-27T23:30:00",
+          "startTime": "22:00",
+          "endTime": "23:30",
           "name": "Big Brother",
           "description": "Reality show.",
-          "category": "reality show",
+          "category": "odrasli program",
           "isRepeat": false,
           "rating": 3
         },
         {
-          "startTime": "2024-02-27T23:30:00",
-          "endTime": "2024-02-28T01:00:00",
+          "startTime": "23:30",
+          "endTime": "01:00",
           "name": "Noćni život",
           "description": "Noćni program.",
           "category": "zabavni program",
@@ -194,8 +194,8 @@
       "name": "RTL",
       "programs": [
         {
-          "startTime": "2024-02-27T09:00:00",
-          "endTime": "2024-02-27T10:30:00",
+          "startTime": "09:00",
+          "endTime": "10:30",
           "name": "RTL Danas",
           "description": "Jutarnje vijesti.",
           "category": "informativni program",
@@ -203,8 +203,8 @@
           "rating": 4
         },
         {
-          "startTime": "2024-02-27T10:30:00",
-          "endTime": "2024-02-27T12:00:00",
+          "startTime": "10:30",
+          "endTime": "12:00",
           "name": "Kafić Uzdravlje",
           "description": "Jutarnji talk show.",
           "category": "talk show",
@@ -212,8 +212,8 @@
           "rating": 3
         },
         {
-          "startTime": "2024-02-27T12:00:00",
-          "endTime": "2024-02-27T13:30:00",
+          "startTime": "12:00",
+          "endTime": "13:30",
           "name": "Exploziv",
           "description": "Magazinska emisija.",
           "category": "magazin",
@@ -221,8 +221,8 @@
           "rating": 4
         },
         {
-          "startTime": "2024-02-27T13:30:00",
-          "endTime": "2024-02-27T15:00:00",
+          "startTime": "13:30",
+          "endTime": "15:00",
           "name": "RTL Vijesti",
           "description": "Popodnevne vijesti.",
           "category": "informativni program",
@@ -230,8 +230,8 @@
           "rating": 5
         },
         {
-          "startTime": "2024-02-27T15:00:00",
-          "endTime": "2024-02-27T16:30:00",
+          "startTime": "15:00",
+          "endTime": "16:30",
           "name": "Večera za 5 na selu",
           "description": "Kulinarski show.",
           "category": "zabavni program",
@@ -239,8 +239,8 @@
           "rating": 4
         },
         {
-          "startTime": "2024-02-27T16:30:00",
-          "endTime": "2024-02-27T18:00:00",
+          "startTime": "16:30",
+          "endTime": "18:00",
           "name": "Potraga",
           "description": "Istraživački program.",
           "category": "informativni program",
@@ -248,8 +248,8 @@
           "rating": 5
         },
         {
-          "startTime": "2024-02-27T18:00:00",
-          "endTime": "2024-02-27T19:30:00",
+          "startTime": "18:00",
+          "endTime": "19:30",
           "name": "RTL Direkt",
           "description": "Večernje vijesti.",
           "category": "informativni program",
@@ -257,8 +257,8 @@
           "rating": 5
         },
         {
-          "startTime": "2024-02-27T19:30:00",
-          "endTime": "2024-02-27T21:00:00",
+          "startTime": "19:30",
+          "endTime": "21:00",
           "name": "Supertalent",
           "description": "Talent show.",
           "category": "zabavni program",
@@ -266,8 +266,8 @@
           "rating": 4
         },
         {
-          "startTime": "2024-02-27T21:00:00",
-          "endTime": "2024-02-27T22:30:00",
+          "startTime": "21:00",
+          "endTime": "22:30",
           "name": "Ljubav je na selu",
           "description": "Reality show.",
           "category": "reality show",
@@ -275,11 +275,11 @@
           "rating": 3
         },
         {
-          "startTime": "2024-02-27T22:30:00",
-          "endTime": "2024-02-28T00:00:00",
+          "startTime": "22:30",
+          "endTime": "00:00",
           "name": "CSI: Miami",
           "description": "Kriminalistička serija.",
-          "category": "serija",
+          "category": "odrasli program",
           "isRepeat": false,
           "rating": 4
         }
@@ -289,8 +289,8 @@
       "name": "Sportski kanal",
       "programs": [
         {
-          "startTime": "2024-02-27T09:00:00",
-          "endTime": "2024-02-27T10:30:00",
+          "startTime": "09:00",
+          "endTime": "10:30",
           "name": "Jutarnji trening",
           "description": "Savjeti za trening i prehranu.",
           "category": "edukativni program",
@@ -298,8 +298,8 @@
           "rating": 3
         },
         {
-          "startTime": "2024-02-27T10:30:00",
-          "endTime": "2024-02-27T12:00:00",
+          "startTime": "10:30",
+          "endTime": "12:00",
           "name": "Pregled lige",
           "description": "Analiza i pregled sportskih događaja.",
           "category": "sportski program",
@@ -307,8 +307,8 @@
           "rating": 4
         },
         {
-          "startTime": "2024-02-27T12:00:00",
-          "endTime": "2024-02-27T13:30:00",
+          "startTime": "12:00",
+          "endTime": "13:30",
           "name": "Uživo: Tenis",
           "description": "Prijenos teniskog turnira.",
           "category": "sportski program",
@@ -316,8 +316,8 @@
           "rating": 5
         },
         {
-          "startTime": "2024-02-27T13:30:00",
-          "endTime": "2024-02-27T15:00:00",
+          "startTime": "13:30",
+          "endTime": "15:00",
           "name": "Sportske vijesti",
           "description": "Najnovije vijesti iz svijeta sporta.",
           "category": "informativni program",
@@ -325,8 +325,8 @@
           "rating": 4
         },
         {
-          "startTime": "2024-02-27T15:00:00",
-          "endTime": "2024-02-27T16:30:00",
+          "startTime": "15:00",
+          "endTime": "16:30",
           "name": "Uživo: Košarka",
           "description": "Prijenos košarkaške utakmice.",
           "category": "sportski program",
@@ -334,8 +334,8 @@
           "rating": 5
         },
         {
-          "startTime": "2024-02-27T16:30:00",
-          "endTime": "2024-02-27T18:00:00",
+          "startTime": "16:30",
+          "endTime": "18:00",
           "name": "Magazin ekstremnih sportova",
           "description": "Pregled ekstremnih sportskih događanja.",
           "category": "magazin",
@@ -343,8 +343,8 @@
           "rating": 3
         },
         {
-          "startTime": "2024-02-27T18:00:00",
-          "endTime": "2024-02-27T19:30:00",
+          "startTime": "18:00",
+          "endTime": "19:30",
           "name": "Uživo: Nogomet",
           "description": "Prijenos nogometne utakmice.",
           "category": "sportski program",
@@ -352,8 +352,8 @@
           "rating": 5
         },
         {
-          "startTime": "2024-02-27T19:30:00",
-          "endTime": "2024-02-27T21:00:00",
+          "startTime": "19:30",
+          "endTime": "21:00",
           "name": "Sportski intervju",
           "description": "Razgovor s poznatim sportašima.",
           "category": "talk show",
@@ -361,8 +361,8 @@
           "rating": 4
         },
         {
-          "startTime": "2024-02-27T21:00:00",
-          "endTime": "2024-02-27T22:30:00",
+          "startTime": "21:00",
+          "endTime": "22:30",
           "name": "Večernji trening",
           "description": "Savjeti za večernje treninge i oporavak.",
           "category": "edukativni program",
@@ -370,8 +370,8 @@
           "rating": 3
         },
         {
-          "startTime": "2024-02-27T22:30:00",
-          "endTime": "2024-02-28T00:00:00",
+          "startTime": "22:30",
+          "endTime": "00:00",
           "name": "Noćni sportski pregled",
           "description": "Pregled dana u sportu.",
           "category": "informativni program",

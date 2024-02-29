@@ -11,9 +11,12 @@ function loadSchedule() {
     .then((data) => displaySchedule(data.channels))
     .catch((error) => console.error("Error loading schedule:", error));
 }
-
 function displaySchedule(channels) {
   const now = new Date();
+  const currentHours = now.getHours();
+  const currentMinutes = now.getMinutes();
+  const currentTotalMinutes = currentHours * 60 + currentMinutes;
+
   const container = document.getElementById("schedule-container");
   container.innerHTML = "";
 
@@ -23,9 +26,11 @@ function displaySchedule(channels) {
     channelName.textContent = channel.name;
     channelElement.appendChild(channelName);
 
-    const sortedPrograms = channel.programs.sort(
-      (a, b) => new Date(a.startTime) - new Date(b.startTime)
-    );
+    const sortedPrograms = channel.programs.sort((a, b) => {
+      const [aHours, aMinutes] = a.startTime.split(":").map(Number);
+      const [bHours, bMinutes] = b.startTime.split(":").map(Number);
+      return aHours * 60 + aMinutes - (bHours * 60 + bMinutes);
+    });
 
     const displayedPrograms = sortedPrograms.slice(
       currentIndex,
@@ -35,22 +40,26 @@ function displaySchedule(channels) {
     displayedPrograms.forEach((program) => {
       const programElement = document.createElement("div");
       programElement.classList.add("program");
+
+      const [startHours, startMinutes] = program.startTime
+        .split(":")
+        .map(Number);
+      const [endHours, endMinutes] = program.endTime.split(":").map(Number);
+      const programStartTotalMinutes = startHours * 60 + startMinutes;
+      const programEndTotalMinutes = endHours * 60 + endMinutes;
+
       if (
-        new Date(program.startTime) <= now &&
-        new Date(program.endTime) > now
+        currentTotalMinutes >= programStartTotalMinutes &&
+        currentTotalMinutes <= programEndTotalMinutes
       ) {
         programElement.classList.add("highlight");
       }
 
       programElement.innerHTML = `
-          <h3>${program.name}</h3>
-          <p>${new Date(program.startTime).toLocaleTimeString()} - ${new Date(
-        program.endTime
-      ).toLocaleTimeString()}</p>
-          <p>${program.description}</p>
-          <p>Kategorija: ${program.category}</p>
-          <p>Ocjena: ${program.rating}</p>
-        `;
+        <h3>${program.name}</h3>
+        <p>${program.startTime} - ${program.endTime}</p>
+        <p>Kategorija: ${program.category}</p>
+      `;
       channelElement.appendChild(programElement);
     });
 
