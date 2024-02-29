@@ -14,6 +14,7 @@ function loadSchedule() {
     .then((data) => displaySchedule(data.channels))
     .catch((error) => console.error("Error loading schedule:", error));
 }
+
 function displaySchedule(channels) {
   const now = new Date();
   const currentHours = now.getHours();
@@ -140,7 +141,7 @@ function displayProgramDetails(program) {
   ).textContent = `Kategorija: ${program.category}`;
   document.getElementById(
     "programRating"
-  ).textContent = `Ocjena: ${program.rating}/5`;
+  ).textContent = `Ocjena: ${program.rating}`;
   document.getElementById("programRepeat").textContent = `Repriza: ${
     program.isRepeat ? "Da" : "Ne"
   }`;
@@ -168,4 +169,42 @@ function updateWatchlistDisplay() {
       watchlistElement.appendChild(listItem);
     }
   });
+}
+
+document.getElementById("apply-filters").addEventListener("click", () => {
+  const categoryFilter = document.getElementById("filter-category").value;
+  const ratingFilter = document.getElementById("filter-rating").value;
+  const watchlistFilter = document.getElementById("filter-watchlist").checked;
+
+  loadSchedule(categoryFilter, ratingFilter, watchlistFilter);
+});
+
+function loadSchedule(
+  categoryFilter = "",
+  ratingFilter = "",
+  watchlistFilter = false
+) {
+  fetch("data/schedule.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const filteredChannels = data.channels.map((channel) => {
+        return {
+          ...channel,
+          programs: channel.programs.filter((program) => {
+            const inWatchlist = watchlist.some(
+              (item) =>
+                item.id === `program-${program.name}-${program.startTime}`
+            );
+            return (
+              (!categoryFilter || program.category === categoryFilter) &&
+              (!ratingFilter || program.rating.toString() === ratingFilter) &&
+              (!watchlistFilter || inWatchlist)
+            );
+          }),
+        };
+      });
+
+      displaySchedule(filteredChannels);
+    })
+    .catch((error) => console.error("Error loading schedule:", error));
 }

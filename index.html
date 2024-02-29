@@ -13,6 +13,33 @@
     <div id="controls">
       <button id="change-pin">Promijeni PIN</button>
     </div>
+    <div id="filter-controls">
+      <select id="filter-category">
+        <option value="">Sve kategorije</option>
+        <option value="sportski program">Sport</option>
+        <option value="zabavni program">Zabavni program</option>
+        <option value="informativni program">Informativni program</option>
+        <option value="edukativni program">Edukativni program</option>
+        <option value="talk show">Talk show</option>
+        <option value="odrasli program">Odrasli program</option>
+      </select>
+
+      <select id="filter-rating">
+        <option value="">Sve ocjene</option>
+        <option value="5">5</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1</option>
+      </select>
+
+      <label>
+        <input type="checkbox" id="filter-watchlist" /> U WATCHLISTI
+      </label>
+
+      <button id="apply-filters">Primijeni filtre</button>
+    </div>
+
     <div id="schedule-container"></div>
     <div id="pagination-controls">
       <button id="prev">Prethodni</button>

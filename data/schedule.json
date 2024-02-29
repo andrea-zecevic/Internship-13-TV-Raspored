@@ -112,7 +112,7 @@
           "endTime": "13:00",
           "name": "Dobar dan, Hrvatska",
           "description": "Popodnevni magazin.",
-          "category": "magazin",
+          "category": "talk show",
           "isRepeat": false,
           "rating": 4
         },
@@ -216,7 +216,7 @@
           "endTime": "13:30",
           "name": "Exploziv",
           "description": "Magazinska emisija.",
-          "category": "magazin",
+          "category": "talk show",
           "isRepeat": false,
           "rating": 4
         },
@@ -338,7 +338,7 @@
           "endTime": "18:00",
           "name": "Magazin ekstremnih sportova",
           "description": "Pregled ekstremnih sportskih događanja.",
-          "category": "magazin",
+          "category": "sportski program",
           "isRepeat": false,
           "rating": 3
         },

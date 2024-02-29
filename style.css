@@ -141,3 +141,28 @@ h1 {
   align-items: center;
   justify-content: space-between;
 }
+
+#filter-controls {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#filter-controls select,
+#filter-controls input,
+#filter-controls button {
+  margin: 5px;
+  padding: 5px;
+}
+
+#filter-controls button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+
+#filter-controls button:hover {
+  background-color: #0056b3;
+}
