@@ -81,22 +81,6 @@ document.getElementById("next").addEventListener("click", () => {
   loadSchedule();
 });
 
-function displayProgramDetails(program) {
-  if (program.category === "odrasli program") {
-    const pin = prompt("Unesite PIN za roditeljsku zaštitu:");
-    if (pin !== parentalControlPIN) {
-      alert("Neispravan PIN!");
-      return;
-    }
-  }
-
-  alert(
-    `Detalji programa: ${program.name}\nOpis: ${
-      program.description
-    }\nRepriza: ${program.isRepeat ? "Da" : "Ne"}\nOcjena: ${program.rating}/5`
-  );
-}
-
 document
   .getElementById("change-pin")
   .addEventListener("click", changeParentalControlPIN);
@@ -110,3 +94,38 @@ function changeParentalControlPIN() {
     alert("PIN mora biti broj između 4 i 8 znamenki.");
   }
 }
+
+function displayProgramDetails(program) {
+  if (program.category === "odrasli program") {
+    const pin = prompt("Unesite PIN za roditeljsku zaštitu:");
+    if (pin !== parentalControlPIN) {
+      alert("Neispravan PIN!");
+      return;
+    }
+  }
+
+  document.getElementById("programName").textContent = program.name;
+  document.getElementById(
+    "programDescription"
+  ).textContent = `Opis: ${program.description}`;
+  document.getElementById(
+    "programCategory"
+  ).textContent = `Kategorija: ${program.category}`;
+  document.getElementById(
+    "programRating"
+  ).textContent = `Ocjena: ${program.rating}/5`;
+  document.getElementById("programRepeat").textContent = `Repriza: ${
+    program.isRepeat ? "Da" : "Ne"
+  }`;
+
+  document.getElementById("programModal").style.display = "block";
+}
+
+document.querySelector(".close").onclick = function () {
+  document.getElementById("programModal").style.display = "none";
+};
+window.onclick = function (event) {
+  if (event.target == document.getElementById("programModal")) {
+    document.getElementById("programModal").style.display = "none";
+  }
+};
